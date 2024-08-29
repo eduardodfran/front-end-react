@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # specify the Node.js version
+          node-version: '20.15.0' # specify the Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -32,4 +32,4 @@ jobs:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }} # your Surge deployment token
         run: |
           npm install -g surge
-          surge ./dist your-custom-domain.surge.sh
+          surge ./dist eduardofran.surge.sh
