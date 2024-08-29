@@ -1,0 +1,19 @@
+.header {
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .header-title {
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .header-subtitle {
+    font-size: 4rem;
+    color: gray;
+  }
+  
+  .header-description {
+    font-size: 1.2rem;
+    color: white;
+  }
