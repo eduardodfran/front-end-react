@@ -1,15 +1,12 @@
-name: Deploy React Portfolio
+name: Deploy to Surge
 
 on:
   push:
     branches:
-      - main # or your default branch
-  pull_request:
-    branches:
-      - main # or your default branch
+      - main  # or your default branch
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.15.0' # specify the Node.js version
+          node-version: '20.15.0'  # specify the Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -27,9 +24,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy to Surge
         env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }} # your Surge deployment token
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
         run: |
           npm install -g surge
           surge ./dist eduardofran.surge.sh
