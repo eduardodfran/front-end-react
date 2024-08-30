@@ -1,6 +1,6 @@
 .profile-card {
     background-color: #282828;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-radius: 10px;
     height: 70vh;
@@ -38,3 +38,19 @@
   .profile-socials {
     margin-top: 10px;
   }
+
+/* mobile responsive */
+
+@media (max-width: 750px) {
+  .profile-card {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    width: 100%;
+    height: auto;
+  }
+
+}

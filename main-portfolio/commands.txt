@@ -1,0 +1,33 @@
+# Git Commands
+git add .
+git commit -m "Your commit message"
+git push origin main
+git pull origin main
+
+# Frontend React Commands
+cd frontend
+npm install
+npm run dev
+npm run build
+npm run preview
+
+# Backend Python Commands
+cd backend
+pip install -r requirements.txt
+python app.py
+pytest
+
+# Deployment Commands
+surge ./dist yourdomain.surge.sh
+
+# CI/CD Pipeline Commands
+# Trigger manually from the GitHub Actions tab in your repository
+
+# Docker Commands (if used)
+docker build -t your-image-name .
+docker run -p 80:80 your-image-name
+docker-compose up
+
+# General Commands
+git status
+docker logs container-id
