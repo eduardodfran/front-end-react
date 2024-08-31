@@ -15,7 +15,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch('https://your-backend.vercel.app/send_email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,6 +26,7 @@ const Contact = () => {
       alert(result.message);
     } catch (error) {
       console.error('Error:', error);
+      alert('Failed to send email.');
     }
   };
 
