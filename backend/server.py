@@ -4,6 +4,10 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all origins
@@ -17,12 +21,12 @@ def send_email():
 
     sender_email = os.getenv('SENDER_EMAIL')
     sender_password = os.getenv('SENDER_PASSWORD')
-    receiver_email = "franeduardo305@gmail.com"
+    receiver_email = "franeduardo305@gmail.com"  # Your email address to receive the message
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = receiver_email
-    msg['Subject'] = f"New Contact Form Submission: {name}"
+    msg['Subject'] = f"New Contact Form Submission from {name}"
 
     body = f"Name: {name}\nEmail: {email}\nMessage:\n{message}"
     msg.attach(MIMEText(body, 'plain'))
