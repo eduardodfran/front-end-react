@@ -3,6 +3,7 @@
     { "src": "./server.py", "use": "@vercel/python" }
   ],
   "routes": [
+    { "src": "/send_email", "dest": "./server.py" },
     { "src": "/(.*)", "dest": "./server.py" }
   ]
 }
