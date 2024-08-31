@@ -15,7 +15,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://your-backend.vercel.app/send_email', {
+      const response = await fetch('https://portfolio-flask-lime.vercel.app/send_email', {  // Replace with your Vercel URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
