@@ -17,7 +17,7 @@ def send_email():
 
     sender_email = os.getenv('SENDER_EMAIL')
     sender_password = os.getenv('SENDER_PASSWORD')
-    receiver_email = "your_email@gmail.com"
+    receiver_email = "franeduardo305@gmail.com"
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
