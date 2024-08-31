@@ -12,8 +12,12 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all origins
 
-@app.route('/send_email', methods=['POST'])
-def send_email():
+@app.route('/')
+def home():
+    return "Hello, Flask is running!"
+
+@app.route('/sendemail', methods=['POST'])
+def sendemail():
     data = request.json
     name = data['name']
     email = data['email']
@@ -22,6 +26,9 @@ def send_email():
     sender_email = os.getenv('SENDER_EMAIL')
     sender_password = os.getenv('SENDER_PASSWORD')
     receiver_email = "franeduardo305@gmail.com"  # Your email address to receive the message
+
+    if not sender_email or not sender_password:
+        return jsonify({'message': 'Email configuration is missing'}), 500
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
