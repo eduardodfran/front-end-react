@@ -1,5 +1,6 @@
 .journal-section {
   padding: 40px;
+  padding-top: 16vh;
   background-color: #121212;
   color: #e0e0e0;
   font-family: 'Roboto', sans-serif;
@@ -31,7 +32,6 @@
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   width: 100%;
-  transition: transform 0.3s;
 }
 
 .journal-entry::before {
@@ -55,9 +55,7 @@
   background: #ffa500;
 }
 
-.journal-entry:hover {
-  transform: scale(1.05);
-}
+
 
 .journal-entry h3 {
   color: #ffa500;
@@ -80,4 +78,18 @@ h2 {
   text-align: center;
   color: #ffa500;
   margin-bottom: 30px;
+}
+
+/* mobile responsive */
+
+@media (max-width: 600px) {
+  .journal-section {
+    padding-top: 20vh;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .journal-section h2 {
+    margin-bottom: 40px;
+  }
 }
