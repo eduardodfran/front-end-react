@@ -8,6 +8,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [modal, setModal] = useState({ isOpen: false, message: '', success: false });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -15,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/sendemail`, {  // Use environment variable
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/sendemail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,11 +25,15 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
       const result = await response.json();
-      alert(result.message);
+      setModal({ isOpen: true, message: result.message, success: true });
     } catch (error) {
       console.error('Error:', error);
-      alert('Failed to send email.');
+      setModal({ isOpen: true, message: 'Failed to send email.', success: false });
     }
+  };
+
+  const closeModal = () => {
+    setModal({ ...modal, isOpen: false });
   };
 
   return (
@@ -59,6 +65,27 @@ const Contact = () => {
         ></textarea>
         <button type="submit">Send</button>
       </form>
+      {modal.isOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            {modal.success ? (
+              <div className="icon success">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+              </div>
+            ) : (
+              <div className="icon error">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </div>
+            )}
+            <p>{modal.message}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

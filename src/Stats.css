@@ -1,5 +1,5 @@
 .stats {
-  padding: 60px 20px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -47,4 +47,28 @@
 .stat-item p {
   color: #adb5bd;
   font-size: 1rem;
+}
+
+/* resposive design */
+
+@media (max-width: 600px) {
+
+  .stats h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item {
+    width: 200px;
+  }
+
+  .stat-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.8rem;
+  }
+
+
+
 }

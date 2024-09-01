@@ -9,7 +9,6 @@
   color: white;
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
-
 }
 
 .front {
@@ -21,6 +20,8 @@
   justify-content: center;
   align-items: center;
   padding: 5rem;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
 .left {
@@ -38,6 +39,11 @@
     width: 50%;
   }
 
+  .front {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 
 
 }
@@ -50,12 +56,23 @@
 
 @media (max-width: 600px) {
   .front {
-    padding-top: 5rem;
+    padding-top: 7rem;
     display: block;
-    height: 170vh;
+    height: 130vh;
+    
   }
 
   .left, .right {
     width: 100%;
   }
+}
+
+@media (max-width: 500px) {
+  .front {
+    padding-top: 7rem;
+    display: block;
+    height: 140vh;
+    
+  }
+
 }

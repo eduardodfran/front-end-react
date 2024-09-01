@@ -78,3 +78,20 @@
   background: #ffc107;
   color: #333;
 }
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 300px;
+    height: 150px;
+  }
+
+  .overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay p {
+    font-size: 0.8rem;
+  }
+}
