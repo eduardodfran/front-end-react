@@ -75,4 +75,21 @@
     
   }
 
+@media (max-height: 800px) {
+  .front {
+    height: 180vh;
+  }
+
+
+  @media (max-height: 720px) {
+    .front {
+      height: 195vh;
+    }
+
+  @media (max-height: 660px) {
+    .front {
+      height: 220vh;
+    }
+
+
 }
