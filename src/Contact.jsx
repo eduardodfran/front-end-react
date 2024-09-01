@@ -15,7 +15,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://127.0.0.1:5000/sendemail', {  // Ensure URL is correct
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/sendemail`, {  // Use environment variable
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
