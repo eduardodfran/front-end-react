@@ -9,6 +9,9 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import Journal from './Journal';
+import Blog from './Blog';
+import BlogPostDetail from './posts/BlogPostDetail';
+
 
 const App = () => {
   return (
@@ -37,6 +40,8 @@ const App = () => {
             }
           />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPostDetail />} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,36 @@
+.blog-post-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 8px;
+    line-height: 1.6;
+    padding-top: 13vh;
+
+
+  }
+  
+  .blog-post-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-post-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-detail h2, .blog-post-detail h3 {
+    font-size: 2em;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .blog-post-detail p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  

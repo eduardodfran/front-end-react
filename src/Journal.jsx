@@ -82,6 +82,53 @@ const Journal = () => {
 <p>Productive day with successful completion of the Linux course and a solid plan to transition into Python learning. Looking forward to applying Linux skills and beginning the next learning phase.</p>
 `,
     },
+    {
+      "date": "September 1, 2024",
+      "title": "Completed Python Course and Developed Responsive Portfolio",
+      "content": `
+    <h4>Today's Focus:</h4>
+    <p>Finalized Python Course and Developed Responsive Portfolio Backend</p>
+    <h4>Activities Completed:</h4>
+    <ul>
+      <li><strong>Completed University of Helsinki's Python Course:</strong>
+        <ul>
+          <li>Finished the course material and now waiting for the final exam scheduled for September 7.</li>
+        </ul>
+      </li>
+      <li><strong>Created and Deployed Responsive Portfolio Backend using Flask:</strong>
+        <ul>
+          <li>Developed a backend for my personal portfolio using Python Flask.</li>
+          <li>Implemented a contact form functionality that sends an email to me when a guest submits their name, email, and message.</li>
+          <li>Deployed the Flask backend separately, ensuring smooth operation.</li>
+          <li>Made the entire portfolio responsive, ensuring it looks good on both desktop and mobile devices.</li>
+        </ul>
+      </li>
+      <li><strong>Deployed React + Vite Portfolio on Vercel:</strong>
+        <ul>
+          <li>Successfully deployed my React + Vite portfolio on Vercel.</li>
+          <li>Encountered and resolved a 404 Not Found error after troubleshooting the entire day.</li>
+        </ul>
+      </li>
+      <li><strong>Learned About App Password for Gmail Integration:</strong>
+        <ul>
+          <li>Discovered the necessity of using an app password to enable Gmail functionality for the contact form.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Challenges:</h4>
+    <ul>
+      <li><strong>Vercel 404 Error:</strong> Spent a significant amount of time troubleshooting and resolving deployment issues.</li>
+    </ul>
+    <h4>Reflections:</h4>
+    <ul>
+      <li><strong>Progress:</strong> Achieved successful deployment of both the frontend and backend for my portfolio, overcoming several technical challenges along the way. The portfolio is now fully responsive.</li>
+      <li><strong>Next Steps:</strong> Focus on learning Linux Bash scripting and creating related projects when time permits.</li>
+    </ul>
+    <h4>Overall:</h4>
+    <p>It was a productive period, with the completion of my Python course and the successful deployment of my responsive portfolio. I'll shift focus to Linux Bash scripting next, though my availability will be limited due to upcoming school events and responsibilities as a student org officer.</p>
+    `
+    }
+    
   ];
 
   return (
