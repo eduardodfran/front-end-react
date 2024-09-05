@@ -128,7 +128,6 @@ const Journal = () => {
     <p>It was a productive period, with the completion of my Python course and the successful deployment of my responsive portfolio. I'll shift focus to Linux Bash scripting next, though my availability will be limited due to upcoming school events and responsibilities as a student org officer.</p>
     `
     }
-    
   ];
 
   return (

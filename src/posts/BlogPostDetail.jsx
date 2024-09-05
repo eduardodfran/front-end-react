@@ -16,7 +16,6 @@ const BlogPostDetail = () => {
       date: 'September 3, 2024',
       content: `
         <h2>Project Name: Studelist</h2>
-        <img src="${StudelistImage}" alt="Studelist Project Image" />
         <p><strong>Purpose:</strong> Studelist is a student-focused dashboard application designed to help students manage their academic and personal tasks efficiently. The application integrates various tools for note-taking, to-do lists, event scheduling, and time management, aiming to enhance students' productivity and organization.</p>
         <h3>Features</h3>
         <p><strong>Dashboard:</strong> The central hub where users can view and manage their notes, to-do lists, and events. It includes a sidebar navigation for quick access to tools like the to-do list, calendar, notes, and Pomodoro timer.</p>
@@ -55,7 +54,7 @@ const BlogPostDetail = () => {
 
   return (
     <div className="blog-post-detail">
-      <img src={post.image} alt={post.title} className="blog-post-image" />
+      <img src={StudelistImage} alt={post.title} className="blog-post-image" />
       <h1>{post.title}</h1>
       <p>{post.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />

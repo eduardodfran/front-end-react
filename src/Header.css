@@ -1,38 +1,154 @@
+/* General Styles */
 .header {
-    text-align: left;
-    padding: 20px;
+  padding: 60px 40px;
+  border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #1c1c1c 0%, #2c2c2c 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease-out;
+  animation: typing 2s steps(20) forwards, blink 0.5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #50c878;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: #50c878;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #50c878;
+  }
+}
+
+
+.header-subtitle {
+  font-size: 2.5rem;
+  color: #50c878;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.header-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  animation: fadeIn 1.5s ease-out 1s both;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-out 1.5s both;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #50c878;
+  color: #fff;
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #50c878;
+  border: 2px solid #50c878;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(80, 200, 120, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 20px;
+  }
+
   .header-title {
-    font-size: 4rem;
-    color: white;
+    font-size: 3rem;
   }
-  
+
   .header-subtitle {
-    font-size: 4rem;
-    color: gray;
+    font-size: 1.8rem;
   }
-  
+
   .header-description {
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1rem;
   }
 
-/* mobile responsive */
-
-@media (max-width: 750px) {
-    .header-title {
-      font-size: 3rem;
-    }
-  
-    .header-subtitle {
-      font-size: 3rem;
-    }
-  
-    .header-description {
-      font-size: 1rem;
-    }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
   }
+}
 
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
