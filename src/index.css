@@ -81,11 +81,16 @@ body {
   .front {
     padding: 3rem;
   }
+
+  .right {
+    width: 90%;
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .left, .right {
-    width: 50%;
+    width: 90%;
   }
 }
 
