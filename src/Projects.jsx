@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Studelist',
     description: 'Studelist is a comprehensive productivity app designed for students to manage notes, to-do lists, calendars, and events all in one place.',
-    projectUrl: 'https://studelist-app-frontend.vercel.app/'
+    projectUrl: 'https://studelist-app.vercel.app/'
   },
   // Add more projects as needed
 ];
